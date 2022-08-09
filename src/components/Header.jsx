@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
-        <Navbar bg="light" expand="lg" className='position-sticky top-0' style={{zIndex:'999'}}>
+        <Navbar expand="lg" className='position-sticky top-0 navbar-dark bg-dark' style={{zIndex:'999'}}>
       <Container>
         <Navbar.Brand as={Link} to="/">React-Bootstrap</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
