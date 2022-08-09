@@ -1,18 +1,21 @@
 import React from 'react';
-import { Card, Col } from 'react-bootstrap';
+import { Card, Col,Button } from 'react-bootstrap';
 
 const ProductCard = ({product}) => {
+  console.log(product)
     return (
         <Col>
           <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Img height={400} variant="top" src={product.image} />
             <Card.Body>
-              <Card.Title>Card title</Card.Title>
+              <Card.Title>{product.title.slice(0,20)}</Card.Title>
+              <div>
+                <p>Price: ${product.price}</p>
+              </div>
               <Card.Text>
-                This is a longer card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
+                {product.description.slice(0,50)}
               </Card.Text>
+              <Button variant="info">Add to cart</Button>
             </Card.Body>
           </Card>
         </Col>

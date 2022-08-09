@@ -20,6 +20,7 @@ const ProductsView = () => {
         <Row xs={1} md={2} className="g-4">
            {
             products.map(product=> <ProductCard
+                key={product.id}
                 product={product}
             />)
            }
